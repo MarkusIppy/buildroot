@@ -24,3 +24,37 @@ You can also find us on #buildroot on Freenode IRC.
 
 If you would like to contribute patches, please read
 https://buildroot.org/manual.html#submitting-patches
+
+
+How to build your PowerTune image (Pi2 & PI3 only )
+
+
+Open a terminal in Linux 
+
+$ git clone -b MarkusIppy https://github.com/MarkusIppy/buildroot
+$ cd buildroot
+$ make powertune_rpi3_defconfig
+$ make
+
+This will download all required sourcecode into a seperate folder called "dl"
+Once the compilation has finished it will create a pi image called "powertune.img" in the folder
+/buildroot/output/images
+
+Flash the image to your SD card ( you can user Etcher or do it via command Line ) 
+Etcher can be downloaded her https://etcher.io/
+
+The image currently has a boot time of approx 17 seconds until PowerTune is starting ( i am still working on optimization ) 
+
+About the image :
+all Boot messages are redirected to tty3 so the screen stays blank .
+If you quit powertune you will only see a blank screen . 
+Press Alt +F3 to see the terminal.
+
+The username and password are :
+
+user: root
+pw: powertune
+
+I would love if someone can make some optimization to get the boot time to arround 5 seconds from powerup
+
+
