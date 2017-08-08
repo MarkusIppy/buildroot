@@ -260,6 +260,7 @@ comment "Graphic applications"
 	source "package/rrdtool/Config.in"
 	source "package/tesseract-ocr/Config.in"
 	source "package/tspress/Config.in"
+	source "package/powertune/Config.in"
 
 comment "Graphic libraries"
 	source "package/cegui06/Config.in"
