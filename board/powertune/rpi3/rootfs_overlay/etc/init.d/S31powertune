@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Powertune Start
+#
+
+/usr/bin/PowertuneQMLGui
