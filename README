@@ -31,7 +31,7 @@ How to build your PowerTune image (Pi2 & PI3 only )
 
 Open a terminal in Linux 
 
-$ git clone -b MarkusIppy https://github.com/MarkusIppy/buildroot
+$ git clone https://github.com/MarkusIppy/buildroot.git
 $ cd buildroot
 $ make powertune_rpi3_defconfig
 If you use another screen than the official pi Screen , edit the following file 
