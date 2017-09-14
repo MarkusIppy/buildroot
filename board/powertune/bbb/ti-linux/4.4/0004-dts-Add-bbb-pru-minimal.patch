@@ -1,0 +1,50 @@
+From cd8334c0dc9b248992e0e3aa0761e395131ba804 Mon Sep 17 00:00:00 2001
+From: Scott Ellis <scott@jumpnowtek.com>
+Date: Tue, 7 Mar 2017 09:39:25 -0500
+Subject: [PATCH 4/4] dts: Add bbb-pru-minimal
+
+---
+ arch/arm/boot/dts/bbb-pru-minimal.dts | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+ create mode 100644 arch/arm/boot/dts/bbb-pru-minimal.dts
+
+diff --git a/arch/arm/boot/dts/bbb-pru-minimal.dts b/arch/arm/boot/dts/bbb-pru-minimal.dts
+new file mode 100644
+index 0000000..a7c560d
+--- /dev/null
++++ b/arch/arm/boot/dts/bbb-pru-minimal.dts
+@@ -0,0 +1,31 @@
++/*
++ * Copyright (C) 2017 Jumpnow Technologies, LLC - http://jumpnowtek.com
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License version 2 as
++ * published by the Free Software Foundation.
++ */
++
++/dts-v1/;
++
++#include "am33xx.dtsi"
++#include "am335x-bone-common.dtsi"
++#include "am33xx-pruss-uio.dtsi"
++
++/ {
++	compatible = "ti,am335x-bone-green", "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
++};
++
++&ldo3_reg {
++	regulator-min-microvolt = <1800000>;
++	regulator-max-microvolt = <1800000>;
++	regulator-always-on;
++};
++
++&mmc1 {
++	vmmc-supply = <&vmmcsd_fixed>;
++};
++
++&rtc {
++	system-power-controller;
++};
+-- 
+2.7.4
+

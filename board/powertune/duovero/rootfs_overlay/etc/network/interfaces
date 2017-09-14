@@ -1,0 +1,13 @@
+auto lo
+iface lo inet loopback
+
+### wired, dhcp
+auto eth0
+iface eth0 inet dhcp
+
+### wireless, dhcp
+#auto mlan0
+iface mlan0 inet dhcp
+    pre-up sleep 5
+    pre-up wpa_supplicant -imlan0 -c/etc/wpa_supplicant.conf -B
+    down killall wpa_supplicant
