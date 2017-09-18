@@ -1,1 +1,1 @@
-root=/dev/mmcblk0p2 rootwait rootfstype=ext4 console=tty3 loglevel=3 -quiet logo.nologo
+root=/dev/mmcblk0p2 rootwait rootfstype=ext4 console=tty1 loglevel=3 logo.nologo -quiet
